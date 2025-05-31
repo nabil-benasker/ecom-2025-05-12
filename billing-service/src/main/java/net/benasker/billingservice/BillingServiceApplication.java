@@ -37,7 +37,7 @@ public class BillingServiceApplication {
             content.forEach(customer -> {
                 Bill bill = billRepository.save(Bill.builder()
                         .billingDate(new Date())
-                        .customerId(customer.getId().toString())
+                        .customerId(customer.getId())
                         .customer(customer).
                         build());
                 billRepository.save(bill);
