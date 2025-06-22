@@ -1,13 +1,16 @@
 package net.benasker.customerservice;
 
+import net.benasker.customerservice.config.CustomerConfigParams;
 import net.benasker.customerservice.entities.Customer;
 import net.benasker.customerservice.repository.CustomerRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
+@EnableConfigurationProperties(CustomerConfigParams.class)
 public class CustomerServiceApplication {
 
     public static void main(String[] args) {

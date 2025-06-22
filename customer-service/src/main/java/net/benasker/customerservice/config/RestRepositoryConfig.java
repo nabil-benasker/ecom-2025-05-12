@@ -1,6 +1,7 @@
 package net.benasker.customerservice.config;
 
 import net.benasker.customerservice.entities.Customer;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.rest.core.config.RepositoryRestConfiguration;
 import org.springframework.data.rest.webmvc.config.RepositoryRestConfigurer;
@@ -12,4 +13,5 @@ public class RestRepositoryConfig implements RepositoryRestConfigurer {
         RepositoryRestConfigurer.super.configureRepositoryRestConfiguration(config, cors);
         config.exposeIdsFor(Customer.class);
     }
+
 }
